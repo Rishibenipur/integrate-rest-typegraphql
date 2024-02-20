@@ -26,7 +26,7 @@ async function startServer() {
 
     app.use("/abc", (req, res, next) => {
         console.log("Request Body::", req.body);
-        next
+        res.send("UP");
     })
 
     app.use('/graphql',((req, res, next) => {
