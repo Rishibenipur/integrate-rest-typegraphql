@@ -24,7 +24,7 @@ async function startServer() {
     app.use(cors());
     app.use(express.json())
 
-    app.use("/abc", (req, res, next) => {
+    app.get("/", (req, res, next) => {
         console.log("Request Body::", req.body);
         res.send("UP");
     })
